@@ -550,38 +550,6 @@ Designed and developed as an autonomous aerial reforestation payload system for 
 
 ---
 
-## 📞 Support & Troubleshooting
-
-### **CAD Issues**
-- **Cannot open `.f3z` files?** → Install Autodesk Fusion 360 or import `.step` files into FreeCAD/SolidWorks
-- **Need different format?** → All components exported in `.step` (universal) and `.stl` (printing/mesh)
-
-### **Analysis Questions**
-- **FEA results interpretation?** → See [04_ANALYSIS/README.md](04_ANALYSIS/README.md) for detailed analysis summary
-- **Modal frequencies?** → Full mode table with descriptions in `04_ANALYSIS/modal_analysis.txt`
-
-### **Electronics / Firmware**
-- **Servos not moving?** → Check 5V servo rail power independently (see [05_ELECTRONICS/README.md](05_ELECTRONICS/README.md) troubleshooting)
-- **IR sensors reading incorrectly?** → External pull-up resistors required on input-only GPIO pins (34, 35, 36, 39)
-- **MAVLink not connecting?** → Verify Serial1 at 57600 baud; check RX/TX wiring
-
-### **Simulation Issues**
-- **ROS 2 build failures?** → Install missing dependencies via `rosdep install`; see [03_SIMULATIONS/README.md](03_SIMULATIONS/README.md)
-- **Gazebo physics not working?** → Ensure `ros_gz_sim` package is installed
-
----
-
-## 🔮 Future Work & Roadmap
-
-- [ ] Multi-hopper payload configurations (dual or triple dispensers)
-- [ ] Closed-loop deployment control with GPS precision
-- [ ] Flight-test validation on actual UAV platform
-- [ ] Advanced telemetry dashboard (GCS integration)
-- [ ] ROS 2 digital twin for real-time monitoring
-- [ ] Autonomous path planning for reforestation swarms
-- [ ] Hardware-in-loop (HIL) testing with flight simulator
-
----
 
 ## 📜 License & Citation
 
@@ -594,17 +562,3 @@ GitHub Repository: https://github.com/Aakashh-15/Seedball-Dropper-Mechanism
 Year: 2026
 ```
 
----
-
-**Last Updated:** 2026-06-05  
-**Status:** ✅ Complete — Ready for integration & deployment
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Please open an issue or pull request if you have suggestions for improvement.
-
----
-
-**Made with ❤️ for autonomous aerial reforestation**
