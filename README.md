@@ -1,82 +1,155 @@
-# Drone Design Challenge – Autonomous Seedball Dispensing System
+# 🚁 Drone Design Challenge – Autonomous Seedball Dispensing System
 
-## Overview
-
-An autonomous UAV-mounted seedball dispensing mechanism developed for Kriti 2026. The system is designed for aerial reforestation missions and can reliably dispense irregular seedballs while detecting and rectifying jams autonomously.
-
-### Key Features
-- Supports up to **15 kg** payload of non-uniform seedballs
-- ESP32-based autonomous control architecture
-- IR-sensor-based jam detection and seedball counting
-- Dual V-File singulation mechanism
-- Servo-actuated precision dispensing
-- MAVLink telemetry integration
-- UAV-compatible lightweight modular design
+> UAV-mounted autonomous seedball dispensing payload designed for precision aerial reforestation.
 
 ---
 
-## Simulation Video
+## Demo
 
-Place `SIMULATION.mp4` in the repository root.
+### 🎥 Simulation Video
 
-```md
-https://github.com/Aakashh-15/Seedball-Dropper-Mechanism/blob/main/SIMULATION.mp4
+Place `SIMULATION.mp4` in the repository root and uncomment the block below.
+
+```html
+<video src="SIMULATION.mp4" controls width="900"></video>
 ```
 
+---
+
+## Project Overview
+
+Modern aerial reforestation requires reliable deployment of irregular seedballs across remote terrain. Conventional dispensing systems struggle with jamming, inconsistent release rates, and poor handling of non-uniform payloads.
+
+This project presents a compact autonomous dispensing mechanism capable of:
+
+- Carrying up to **15 kg** of seedballs
+- Precision-controlled deployment
+- Autonomous jam detection and recovery
+- Real-time telemetry integration
+- UAV-compatible lightweight architecture
+
+---
 
 ## System Architecture
 
-### Mechanical System
-- Asymmetric hopper geometry optimized for mass flow
-- Dual V-File alignment and singulation mechanism
-- Servo-controlled dispensing gates
-- Active anti-jamming mechanism
+```text
+                    ┌──────────────────┐
+                    │ Flight Controller│
+                    └────────┬─────────┘
+                             │ MAVLink
+                             │
+                    ┌────────▼─────────┐
+                    │      ESP32       │
+                    └───┬─────────┬────┘
+                        │         │
+                     UART       PWM
+                        │         │
+              ┌─────────▼─┐   ┌──▼──┐
+              │ IR Sensors│   │Servo│
+              └───────────┘   └──┬──┘
+                                 │
+                                 ▼
+                       Seedball Dispensing
+```
 
-### Electronics System
-- ESP32 microcontroller
-- Dual-rail power architecture
-- UART communication
-- PWM servo control
+---
+
+## Mechanical Design
+
+### Hopper Architecture
+
+- Custom asymmetric hopper geometry
+- Slot-outlet flow architecture
+- Optimized for irregular seedballs
+- Compact drone-compatible packaging
+
+### V-File Singulation Mechanism
+
+- Aligns seedballs into a single-file stream
+- Provides passive velocity reduction
+- Eliminates multi-seed release events
+- Improves dispensing consistency
+
+### Active Anti-Jamming
+
+- IR-based blockage detection
+- Autonomous servo-actuated recovery
+- Low-frequency shock rectification
+- No operator intervention required
+
+---
+
+## Electronics Architecture
+
+### Controller
+- ESP32
+
+### Sensors
+- Multi-node IR sensing array
+
+### Communication
+- UART
 - MAVLink telemetry
 
-### Software System
+### Actuation
+- Dual servo dispensing gates
+- PWM control
+
+### Power System
+- Dual-rail buck converter architecture
+- Isolated logic and actuator rails
+
+---
+
+## Software Stack
+
+### Embedded Firmware
+
 - Non-blocking state machine
 - Autonomous dispensing logic
-- Jam detection and recovery
+- Jam recovery routines
 - Telemetry broadcasting
-- Simulation framework
+
+### Simulation Framework
+
+- Dynamic payload generation
+- Flow diagnostics
+- Jam prediction analysis
+- Physics-based validation
 
 ---
 
-## Design Highlights
+## Engineering Analysis
 
-### Hopper Design
-- Iterative evolution from pyramidal and conical geometries
-- Cubic-spline-inspired flow optimization
-- Slot outlet architecture for reduced arching and jamming
+### Structural Validation
 
-### V-File Mechanism
-- Single-file seedball alignment
-- Passive velocity reduction
-- Improved dispensing consistency
+- Static FEA
+- Equivalent stress analysis
+- Principal stress evaluation
+- Deformation analysis
 
-### Autonomous Jam Recovery
-- IR-based obstruction detection
-- Servo-driven shake sequence
-- Low-frequency rectification without IMU interference
+### Dynamic Validation
+
+- Modal analysis
+- Flow kinematics
+- Servo dynamics
+- V-file braking analysis
 
 ---
 
-## Technologies Used
+## Key Innovations
 
-- ESP32
-- Arduino Framework
-- MAVLink
-- UART Communication
-- PWM Servo Control
-- CAD Modelling
-- FEA Analysis
-- UAV Payload Integration
+✅ Asymmetric hopper geometry
+
+✅ Slot-outlet anti-arching mechanism
+
+✅ Dual V-file seed singulation
+
+✅ Autonomous jam rectification
+
+✅ ESP32-based intelligent control
+
+✅ MAVLink telemetry integration
 
 ---
 
@@ -88,11 +161,39 @@ https://github.com/Aakashh-15/Seedball-Dropper-Mechanism/blob/main/SIMULATION.mp
 ├── Electronics/
 ├── Firmware/
 ├── Simulation/
+├── Analysis/
 ├── Documentation/
 ├── SIMULATION.mp4
 └── README.md
 ```
 
-## Authors
+---
 
-Kriti 2026 Drone Design Challenge Team
+## Results
+
+| Metric | Value |
+|----------|----------|
+| Payload Capacity | 15 kg |
+| Deployment Interval | 1–5 s |
+| UAV Envelope | 300 × 350 × 350 mm |
+| Controller | ESP32 |
+| Telemetry | MAVLink |
+| Jam Detection | IR-Based |
+
+---
+
+## Future Work
+
+- Closed-loop deployment control
+- Multi-payload dispensing modes
+- Flight-test validation
+- Advanced telemetry dashboard
+- ROS 2 digital twin integration
+
+---
+
+## Team
+
+Kriti 2026 – Drone Design Challenge
+
+Designed and developed as an autonomous aerial reforestation payload system.
