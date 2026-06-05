@@ -20,16 +20,9 @@ An autonomous UAV-mounted seedball dispensing mechanism developed for Kriti 2026
 Place `SIMULATION.mp4` in the repository root.
 
 ```md
-https://github.com/user-attachments/assets/VIDEO_PLACEHOLDER
+https://github.com/Aakashh-15/Seedball-Dropper-Mechanism/blob/main/SIMULATION.mp4
 ```
 
-Or embed directly:
-
-```html
-<video src="SIMULATION.mp4" controls width="800"></video>
-```
-
----
 
 ## System Architecture
 
